@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+.app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #0e0231;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
+  margin: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-bottom: 0rem;
+}
+
+.nav-bar a {
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #018091;
+  text-decoration-thickness: 30%;
+  text-underline-offset: 20%;
+  cursor: pointer;
+}
+
+.logo {
+  width: 125px;
+  height: 125px;
+}
+
+.home {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.home video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.home h1 {
+  background-color: rgb(0, 254, 203, .6);
+  max-width: 75%;
+  font-size: 38px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.home h3 {
+  font-weight: 425;
+}
+
+.home button {
+  background-color: rgb(0, 254, 203, .6);
+  color: white;
+  border: 0;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text {
+  z-index: 100;
+  position: relative;
+  padding-top: 8rem;
+  padding-left: 15rem;
+  color: white;
+  max-width: 30%;
+}
+
+.signup {
+  color: white;
+  text-align: center;
+  padding-bottom: 20rem;
+}
+
+.mountains {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 2rem;
+  background-color: whitesmoke;
+}
+
+.mountains h1 {
+  background-color: rgb(0, 254, 203, .6);
+  max-width: 25%;
+  text-indent: 4px;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.mountains p {
+  font-weight: 300;
+  max-width: 60%;
+}
+
+.mountains h3 {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.mountains h4 {
+  font-weight: 400;
+}
+
+.mountains span {
+  padding-bottom: 1rem;
+  font-weight: 300;
+}
+
+.mountains a {
+  font-size: 16px;
+  padding-bottom: 1rem;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.mountains form {
+  padding-bottom: 1rem;
+}
+
+.mountains img {
+  width: 50%;
+  height: 50%;
+}
+
+.mountains a {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.favorites {
+  color: white;
+  padding-left: 4rem;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 20%;
+}
+
+.submit-button {
+  border: 0;
+  height: 20px;
+  width: 80px;
+  background-color: white;
 }

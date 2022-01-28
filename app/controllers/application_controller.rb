@@ -1,8 +1,13 @@
 class ApplicationController < ActionController::API
-    include ActionController::Cookies
+    include ActionController::Cookies 
 
-    def hello_world
-        session[:count] = (session[:count] || 0) + 1
-        render json: { count: session[:count] }
+    private
+
+    def find_by_username
+        User.find_by(username: params[:username])
+    end
+
+    def current_user
+        User.find_by(id: session[:user_id])
     end
 end
