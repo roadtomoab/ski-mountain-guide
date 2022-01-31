@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 function Mountain ({ mountainToMountains, mountain }) {
 
+    const [ isAdded, setIsAdded ] = useState(false)
+
     const [ rating, setRating ] = useState({
         town_rating: "",
         ski_rating: "",
@@ -16,8 +18,7 @@ function Mountain ({ mountainToMountains, mountain }) {
     }
 
     function handleSubmit(e) {
-        e.preventDefault();
-
+        e.preventDefault()
         const userRatings = { ...rating };
 
         fetch("/ratings", {
@@ -39,13 +40,14 @@ function Mountain ({ mountainToMountains, mountain }) {
 
     function handleClick () {
         mountainToMountains(mountain)
+        setIsAdded(!isAdded)
     }
 
     return (
 
         <div className="mountains">
             <h1>{mountain.name}</h1>
-            <img src={mountain.image_url} />
+            <img alt="resort" src={mountain.image_url} />
             <br></br>
             <p>{mountain.summary}</p>
             <h3>Pass Info</h3>
@@ -57,6 +59,7 @@ function Mountain ({ mountainToMountains, mountain }) {
             <h3>Ski Rating</h3>
             <span>{mountain.avg_ratings.avg_ski_rating}/10</span>
 
+            
             <h4>Leave a Rating!</h4>
                 <form onSubmit={handleSubmit}>
                     <input
@@ -77,7 +80,7 @@ function Mountain ({ mountainToMountains, mountain }) {
                     />
                     <button className="submit-button" type="submit">Submit</button>
                 </form>
-            <a id="favoriteButton" onClick={handleClick}>Add To Favorites</a>
+            <a id="favoriteButton" onClick={handleClick}>{isAdded ? "Added To Favorites" : "Add To Favorites"}</a>
             <br></br>
         </div>
 

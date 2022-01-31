@@ -17,6 +17,7 @@ function LoggedIn ({ setCurrentUser }) {
             <NavLink exact to="/" >HOME</NavLink>
             <NavLink to="/mountains" >EXPLORE</NavLink>
             <NavLink to="/favorites" >FAVORITES</NavLink>
+            <NavLink to="/ratings" >RATINGS</NavLink>
             <NavLink to="/about">ABOUT</NavLink>
             <NavLink to="/contact">CONTACT</NavLink>
             <a onClick={handleLogout}>LOGOUT</a>

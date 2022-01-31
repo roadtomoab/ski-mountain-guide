@@ -41,6 +41,8 @@ function Login ({ setCurrentUser }) {
     return (
 
         <div className="signup">
+        <br></br>
+        <br></br>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
             <input 
@@ -62,7 +64,17 @@ function Login ({ setCurrentUser }) {
             <br></br>
             <br></br>
             <NavLink to="/signup">Don't have an account? Please sign up here</NavLink>
-
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </form>
     </div>
 

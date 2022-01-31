@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Signup () {
+function Signup ({ setCurrentUser }) {
 
     const [ formData, setFormData ] = useState({
         username: "",
@@ -30,7 +30,7 @@ function Signup () {
         })
           .then((r) => r.json())
           .then((user) => {
-            console.log(user);
+            setCurrentUser(user);
             setFormData({
               username: "",
               password: "",
@@ -42,6 +42,8 @@ function Signup () {
     return (
 
         <div className="signup">
+            <br></br>
+            <br></br>
             <h2>Create an Account</h2>
             <form onSubmit={handleSubmit}>
                 <input
@@ -71,6 +73,14 @@ function Signup () {
             <br></br>
             <br></br>
             <NavLink to="/login">Already have an account? Please login here</NavLink>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
 
     )
