@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 
 function Signup ({ setCurrentUser }) {
+
+    let history = useHistory();
 
     const [ formData, setFormData ] = useState({
         username: "",
@@ -36,6 +38,7 @@ function Signup ({ setCurrentUser }) {
               password: "",
               email: ""
             });
+            history.push("/mountains")
           });
       }
 
@@ -53,6 +56,8 @@ function Signup ({ setCurrentUser }) {
                 value={formData.email}
                 onChange={handleChange}
                 />
+                <br></br>
+                <br></br>
                 <input 
                 type="text"
                 placeholder="username"
@@ -60,6 +65,8 @@ function Signup ({ setCurrentUser }) {
                 value={formData.username}
                 onChange={handleChange}
                 />
+                <br></br>
+                <br></br>
                 <input
                 type="password"
                 placeholder="password"
@@ -68,9 +75,10 @@ function Signup ({ setCurrentUser }) {
                 value={formData.password}
                 onChange={handleChange}
                 />
+                <br></br>
+                <br></br>
                 <button type="submit">Submit</button>
             </form>
-            <br></br>
             <br></br>
             <NavLink to="/login">Already have an account? Please login here</NavLink>
             <br></br>

@@ -1,7 +1,7 @@
 class Mountain < ApplicationRecord
-    has_many :ratings
+    has_many :ratings, dependent: :destroy
     has_many :users_w_ratings, through: :ratings, source: :user
-    has_many :favorites
+    has_many :favorites, dependent: :destroy
     has_many :users_w_favorites, through: :favorites, source: :user
 
     def average_town_rating

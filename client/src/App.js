@@ -101,7 +101,7 @@ function App () {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ town_rating: clickedRating.town_rating, ski_rating: clickedRating.ski_rating})
+      body: JSON.stringify({ town_rating: clickedRating.town_rating, ski_rating: clickedRating.ski_rating })
     })
       .then(r => r.json())
       .then(data => console.log(data))
@@ -188,36 +188,3 @@ function App () {
 }
 
 export default App;
-
-  // function updateTodo(id, completed) {
-  //   const updatedTodos = todos.map(todo => {
-  //       if (todo.id === id) {
-  //           return { ...todo, completed }
-  //       } else {
-  //          return todo 
-  //       }
-  //   })
-  // }
-
-  // function updateRating(clickedRating) {
-    
-  //   const updatedRatingsArray = ratingsArray.map((rating) => {
-  //     if (rating.id === clickedRating.id) {
-  //       return { ...}
-  //     }
-  //   })
-  // }
-
-//   function handleCompleted(completed) {
-//     // persist changes on server
-//     fetch(`/todos/${id}`, {
-//         method: "PATCH",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify({ todo: { completed: completed } })
-//     })
-//         .then(r => r.json())
-//         .then(data => onUpdateTodo(data.todo.id, data.todo.completed))
-//     // then use onUpdateTodo to update todo in state
-// }
