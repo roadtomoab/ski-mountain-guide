@@ -47,9 +47,9 @@ function Rating ({ rating, ratingRemoval, updateRating }) {
                 onChange={handleChange}
                 />
                 <br></br>
-                <button type='submit'>Update Rating</button>
+                <button type='submit'>update rating</button>
             </form>
-            <button id="delete-button" className="column" onClick={handleClick}>Remove Rating</button>
+            <button id="delete-button" className="column" onClick={handleClick}>remove rating</button>
         </div>
     )
 }
