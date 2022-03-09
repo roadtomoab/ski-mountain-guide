@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 function Mountain ({ mountainToMountains, mountain }) {
 
+    console.log("mountain here: ", mountain)
+
     const [ isAdded, setIsAdded ] = useState(false)
 
     const [ rating, setRating ] = useState({
@@ -58,6 +60,8 @@ function Mountain ({ mountainToMountains, mountain }) {
             <span>{mountain.avg_ratings.avg_town_rating}/10</span>
             <h3>Ski Rating</h3>
             <span>{mountain.avg_ratings.avg_ski_rating}/10</span>
+            <h3>Nearest Airport</h3>
+            <span>{mountain.nearest_airport}</span>
 
             
             <h4>Leave a Rating!</h4>

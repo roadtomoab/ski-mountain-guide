@@ -1,5 +1,5 @@
 class MountainSerializer < ActiveModel::Serializer
-  attributes :id, :summary, :pass_info, :avg_snowfall, :best_for, :image_url, :name, :avg_ratings
+  attributes :id, :summary, :pass_info, :avg_snowfall, :best_for, :image_url, :name, :avg_ratings, :nearest_airport
 
   def avg_ratings
     {

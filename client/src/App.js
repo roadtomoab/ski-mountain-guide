@@ -106,21 +106,6 @@ function App () {
       .then(r => r.json())
       .then(data => console.log(data))
 
-
-    // last .then, get fetch and then set state
-
-    //     fetch(`/todos/${id}`, {
-//         method: "PATCH",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify({ todo: { completed: completed } })
-//     })
-//         .then(r => r.json())
-//         .then(data => onUpdateTodo(data.todo.id, data.todo.completed))
-//     // then use onUpdateTodo to update todo in state
-
-
   }
 
 
