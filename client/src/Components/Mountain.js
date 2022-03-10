@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
-function Mountain ({ mountainToMountains, mountain }) {
+function Mountain ({ mountainToMountains, mountain, currentUser }) {
+
+    let history = useHistory()
 
     const [ isAdded, setIsAdded ] = useState(false)
 
@@ -44,7 +47,6 @@ function Mountain ({ mountainToMountains, mountain }) {
     }
 
     return (
-
         <div className="mountains">
             <h1>{mountain.name}</h1>
             <img alt="resort" src={mountain.image_url} />
@@ -61,7 +63,8 @@ function Mountain ({ mountainToMountains, mountain }) {
             <h3>Nearest Airport</h3>
             <span>{mountain.nearest_airport}</span>
 
-            
+            {currentUser ?
+            (<>
             <h4>Leave a Rating!</h4>
                 <form onSubmit={handleSubmit}>
                     <input
@@ -86,8 +89,13 @@ function Mountain ({ mountainToMountains, mountain }) {
                 </form>
             <a id="favoriteButton" onClick={handleClick}>{isAdded ? "Added To Favorites" : "Add To Favorites"}</a>
             <br></br>
+            </>)
+            :
+            (<>
+                <p onClick={() => {history.push("/login")}} className='login'>Login to leave a rating and save favorites</p>
+            </>)
+            }
         </div>
-
     )
 }
 

@@ -147,7 +147,7 @@ a:hover {
 .search-bar {
   padding-left: 1rem;
   margin-left: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 320px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
@@ -177,6 +177,20 @@ a:hover {
 .mountains p {
   font-weight: 300;
   max-width: 60%;
+}
+
+.login:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 254, 203, .6);
+  text-decoration-thickness: 30%;
+  text-underline-offset: 20%;
+  cursor: pointer;
+}
+
+.login {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .mountains h3 {

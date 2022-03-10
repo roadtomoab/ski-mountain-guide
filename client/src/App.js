@@ -138,6 +138,7 @@ function App () {
 
             <Route path="/mountains">
               <Mountains
+              currentUser={currentUser}
               mountainsArray={mountainsArray}
               addToFavorites={addToFavorites}
               />

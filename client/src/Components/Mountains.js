@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Mountain from './Mountain'
 
-function Mountains ({ addToFavorites, mountainsArray }) {
+function Mountains ({ addToFavorites, mountainsArray, currentUser }) {
 
     const [searchTerm, setSearchTerm] = useState("")
 
@@ -34,6 +34,7 @@ function Mountains ({ addToFavorites, mountainsArray }) {
             .map((mountain) => {
             return (
                 <Mountain
+                currentUser={currentUser}
                 key={mountain.id}
                 mountain={mountain}
                 mountainToMountains={mountainToMountains}/>
