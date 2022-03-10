@@ -2,8 +2,6 @@ import { useState } from 'react';
 
 function Mountain ({ mountainToMountains, mountain }) {
 
-    console.log("mountain here: ", mountain)
-
     const [ isAdded, setIsAdded ] = useState(false)
 
     const [ rating, setRating ] = useState({
@@ -67,6 +65,7 @@ function Mountain ({ mountainToMountains, mountain }) {
             <h4>Leave a Rating!</h4>
                 <form onSubmit={handleSubmit}>
                     <input
+                    className='rating-input'
                     type="float"
                     placeholder="town rating"
                     name="town_rating"
@@ -75,6 +74,7 @@ function Mountain ({ mountainToMountains, mountain }) {
                     onChange={handleChange}
                     />
                     <input
+                    className='rating-input'
                     type="float"
                     placeholder="ski rating"
                     name="ski_rating"

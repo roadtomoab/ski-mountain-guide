@@ -144,6 +144,28 @@ a:hover {
   background-color: whitesmoke;
 }
 
+.search-bar {
+  padding-left: 1rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 320px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.rating-input {
+  width: 200px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin-right: 1rem;
+  padding-left: 1rem;
+}
+
+
 .mountains h1 {
   background-color: rgb(0, 254, 203, .6);
   max-width: 25%;
@@ -232,9 +254,18 @@ a:hover {
 
 .submit-button {
   border: 0;
-  height: 20px;
-  width: 80px;
-  background-color: white;
+  height: 40px;
+  width: 100px;
+  background-color: whitesmoke;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: rgb(0, 254, 203, .6);
 }
 
 #delete-button {

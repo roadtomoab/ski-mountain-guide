@@ -17,7 +17,9 @@ function Mountains ({ addToFavorites, mountainsArray }) {
 
         <div className='mountains'>
             <input
+            className='search-bar'
             type="text"
+            placeholder='Filter results'
             onChange={handleChange}
             />
             <br></br>
